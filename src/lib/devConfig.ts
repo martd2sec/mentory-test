@@ -3,7 +3,7 @@ import type { User } from '@supabase/supabase-js';
 export const DEV_CONFIG = {
   ENABLE_MOCK_MODE: false,
   // Force offline mode for demo purposes (set to false to allow real Google OAuth)
-  FORCE_OFFLINE_MODE: false, // Fixed: Removed problematic /health endpoint call
+  FORCE_OFFLINE_MODE: true, // Fixed: Removed problematic /health endpoint call
   
   // Mock user data for development
   MOCK_USER: {
