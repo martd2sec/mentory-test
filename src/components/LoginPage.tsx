@@ -5,11 +5,11 @@ import { useAuth } from '../context/AuthContext';
 import BitsoLogo from './BitsoLogo';
 
 const LoginPage: React.FC = () => {
-  const { signInWithGoogle, loading, connectionError } = useAuth();
+  const { signInWithDemo, loading, connectionError } = useAuth();
 
   const handleGoogleSignIn = async () => {
     try {
-      await signInWithGoogle();
+      await signInWithDemo();
     } catch (error) {
       console.error('Login failed:', error);
     }
