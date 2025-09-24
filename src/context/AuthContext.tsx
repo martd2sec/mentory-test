@@ -187,12 +187,10 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
         return;
       }
       
-      // In offline mode, skip Supabase check and use mock authentication
-      if (DEV_CONFIG.FORCE_OFFLINE_MODE) {
-        console.log('🔧 Force offline mode - using mock authentication instead of Google OAuth');
-        signInWithMock();
-        return;
-      }
+      // Always use mock authentication for demo
+      console.log('🔧 Demo mode - using mock authentication instead of Google OAuth');
+      signInWithMock();
+      return;
       
       console.log('🌐 Calling Supabase OAuth with domain restriction: bitso.com');
       // Try Google OAuth - it can work independently of Supabase for domain verification
